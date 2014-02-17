@@ -236,11 +236,7 @@
         </div>
     {% else %}
         {% set type = 'date' %}
-        {% set attr = attr|merge({'max': date_max, 'min': date_min , 'placeholder': date_placeholder_pattern|replace({
-            '{{ year }}':  'YYYY',
-            '{{ month }}': 'MM',
-            '{{ day }}':   'DD',
-        }) }) %}
+        {% set attr = attr|merge({'max': date_max, 'min': date_min , 'placeholder': date_placeholder_pattern}) %}
         {{ block('form_widget_simple') }}
     {% endif %}
 {% elseif widget == 'text' %}
