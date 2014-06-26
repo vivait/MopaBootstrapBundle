@@ -28,8 +28,8 @@ class DateTypeExtension extends AbstractTypeExtension
     */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
-        $view->vars['input_wrapper_class'] = $options['input_wrapper_class'];
-        $view->vars['separator_wrapper_class'] = $options['separator_wrapper_class'];
+        $view->vars['input_wrapper_class'] = isset($options['input_wrapper_class']) ? $options['input_wrapper_class'] : null;
+        $view->vars['separator_wrapper_class'] = isset($options['separator_wrapper_class']) ? $options['separator_wrapper_class'] : null;
     }
 
     /**
